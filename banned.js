@@ -9,67 +9,207 @@ module.exports = {
 				.setDescription('The stage to check spots of')
 				.setRequired(true)
 				.addChoices(
-					{name: "Castle Grounds", value: "cg"}
+					{name: "Banned in all maps", value: "shared"},
+					{name: "Castle Grounds", value: "cg"},
+					{name: "Castle Main Floor", value: "cmf"},
+					{name: "Castle Upper Floor", value: "cuf"},
+					{name: "Jolly Roger Bay", value: "jrb"},
+					{name: "Big Boo's Haunt", value: "bbh"},
+					{name: "Hazy Maze Cave", value: "Hazy Maze Cave"},
+					{name: "Lethal Lava Land", value: "lll"},
+					{name: "Dire Dire Docks", value: "Dire Dire Docks"},
+					{name: "Snowman's Land", value: "Snowman's Land"},
+					{name: "Wet-Dry World", value: "Wet-Dry World"},
+					{name: "Tall Tall Mountain", value: "ttm"},
+					{name: "Tiny-Huge Island", value: "Tiny-Huge Island"},
+					{name: "Tick Tock Clock", value: "Tick Tock Clock"},
+					{name: "Rainbow Ride", value: "rr"},
+					{name: "Princess's Secret Slide", value: "pss"},
+					{name: "The Secret Aquarium", value: "The Secret Aquarium"},
+					{name: "Bowser in the Dark World", value: "Bowser in the Dark World"},
+					{name: "Bowser in the Fire Sea", value: "Bowser in the Fire Sea"},
+					{name: "Bowser in the Sky", value: "Bowser in the Sky"},
+					{name: "Tower of the Wing Cap", value: "Tower of the Wing Cap"},
+					{name: "Cavern of the Metal Cap", value: "Cavern of the Metal Cap"},
+					{name: "Vanish Cap Under the Moat", value: "Vanish Cap Under the Moat"},
+					{name: "Wing Mario Over the Rainbow", value: "wmotr"},
+					{name: "Castle Courtyard", value: "Castle Courtyard"}
 				)),
 		async execute(interaction) {
 
 			const next = new ButtonBuilder()
 				.setCustomId('next')
-				.setLabel('Next stage')
+				.setLabel('Next spot')
 				.setStyle(ButtonStyle.Secondary)
 	
 			const back = new ButtonBuilder()
 				.setCustomId('back')
-				.setLabel('Previous stage')
+				.setLabel('Previous spot')
 				.setStyle(ButtonStyle.Secondary);
 
 			const pages = {
+				"shared": {
+					"stage": "All stages",
+					"spots": [
+						{
+							"images": [],
+							"text": "Hiding inside a cannon (by setting spot while over a cannon)"
+						}
+					]
+				},
 				"cg": {
 					"stage": "Castle Grounds",
 					"spots": [
 						{
 							"images": [
-								"https://gingerphoenix10.com/geobot/cg/a.png",
-								"https://gingerphoenix10.com/geobot/cg/b.png"
+								"Screenshot (272)",
+								"Screenshot (273)"
 							],
 							"text": "Hiding inside either of the 2 pillars on top of the castle"
 						},
 						{
 							"images": [
-								"https://gingerphoenix10.com/Mania/placehodler.png",
+								"Screenshot (274)",
 							],
-							"text": "text2"
+							"text": "Hiding out-of-bounds behind the castle doors"
 						}
 					]
 				},
-				"ci": {
-					"stage": "Castle inside or sum shit idk im speedrunning this"
+				"cmf": {
+					"stage": "Castle Main Floor",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (275)"
+							],
+							"text": "Hiding out-of-bounds behind the entrance doors to the castle"
+						},
+						{
+							"images": [
+								"Screenshot (276)",
+								"Screenshot (277)"
+							],
+							"text": "Hiding inside either of the pillars next to the main stairs"
+						}
+					]
+				},
+				"jrb": {
+					"stage": "Jolly Roger Bay",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (278)"
+							],
+							"text": "Hiding out-of-bounds above the outcove behind the rock"
+						}
+					]
+				},
+				"pss": {
+					"stage": "Princess's Secret Slide",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (279)"
+							],
+							"text": "Hiding on top of one of the pillars near the bottom of the slide"
+						},
+						{
+							"images": [
+								"Screenshot (281)"
+							],
+							"text": "Hiding on top of the roof of the exit room"
+						}
+					]
+				},
+				"bbh": {
+					"stage": "Big Boo's Haunt",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (282)"
+							],
+							"text": "Hiding behind the bookshelf next to \"Secret of the haunted books\" power star"
+						}
+					]
+				},
+				"lll": {
+					"stage": "Lethal Lava Land",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (283)"
+							],
+							"text": "Hiding on top of the grate next to the \"Red-hot log rolling\" power star"
+						},
+						{
+							"images": [
+								"Screenshot (284)"
+							],
+							"text": "Hiding inside the fire spinner in the back-left of the stage"
+						}
+					],
+				},
+				"ttm": {
+					"stage": "Tall Tall Mountain",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (285)"
+							],
+							"text": "Hiding out-of-bounds behind the waterfall at the start of the stage"
+						},
+						{
+							"images": [
+								"Screenshot (294)"
+							],
+							"text": "Hiding out-of-bounds below the monkey platform by using the slope clip"
+						}
+					]
+				},
+				"cuf": {
+					"stage": "Castle Upper Floor",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (288)"
+							],
+							"text": "Hiding out-of-bounds behind the entrance to Tick-Tock Clock"
+						}
+					]
+				},
+				"rr": {
+					"stage": "Rainbow Ride",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (289)"
+							],
+							"text": "Hiding on top of the castle (inside is allowed)"
+						},
+						{
+							"images": [
+								"Screenshot (291)"
+							],
+							"text": "Hiding on the ship"
+						}
+					]
+				},
+				"wmotr": {
+					"stage": "Wing Mario over the Rainbow",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (290)"
+							],
+							"text": "The entirety of Wing Mario over the Rainbow is banned. Attempting to enter it will kick you back to the castle"
+						}
+					]
 				}
 			};
 
 			var spotData = pages[interaction.options.getString('stage')]
 
-			back.setDisabled(true)
-			next.setDisabled(spotData.spots.length < 2)
-
-			const embeds = []
-			for (var image of spotData.spots[0].images) {
-				embeds.push(new EmbedBuilder().setImage(image))
-			}
-			embeds[0].setTitle(spotData.stage)
-				.setColor(0x7289DA)
-				.setDescription(spotData.spots[0].text)
-
-			const response = await interaction.reply({
-				embeds: embeds,
-				components: [
-					new ActionRowBuilder()
-						.addComponents(back, next)
-				],
-				withResponse: true,
-			});
-
-			async function getPage(page) {
+			async function getPage(page, response) {
 				
 				const collectorFilter = i => i.user.id === interaction.user.id;
 				try {
@@ -81,8 +221,11 @@ module.exports = {
 
 						const embeds = []
 						for (var image of spotData.spots[page+1].images) {
-							embeds.push(new EmbedBuilder().setImage(image))
+							image=image.replaceAll(" ", "%20");
+							console.log(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`);
+							embeds.push(new EmbedBuilder().setImage(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`))
 						}
+						if (embeds.length == 0) embeds.push(new EmbedBuilder());
 						embeds[0].setTitle(spotData.stage)
 							.setColor(0x7289DA)
 							.setDescription(spotData.spots[page+1].text)
@@ -96,14 +239,16 @@ module.exports = {
 							withResponse: true,
 						})
 		
-						getPage(page+1)
+						getPage(page+1, response)
 					} else if (confirmation.customId === 'back') {
 						back.setDisabled(page-1==0);
 						next.setDisabled(page-1==spotData.spots.length-1);
 						
 						const embeds = []
 						for (var image of spotData.spots[page-1].images) {
-							embeds.push(new EmbedBuilder().setImage(image))
+							image=image.replaceAll(" ", "%20");
+							console.log(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`);
+							embeds.push(new EmbedBuilder().setImage(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`))
 						}
 						embeds[0].setTitle(spotData.stage)
 							.setColor(0x7289DA)
@@ -118,14 +263,40 @@ module.exports = {
 							withResponse: true,
 						})
 
-						getPage(page-1)
+						getPage(page-1, response)
 					}
-				} catch(e) {
-					console.log(e);
-					await interaction.editReply({ content: 'Confirmation not received within 1 minute, cancelling', components: [] });
-				}
+				} catch {}
 			}
-			getPage(0);
+			if (spotData) {
+				back.setDisabled(true)
+				next.setDisabled(spotData.spots.length < 2)
+				const embeds = []
+				for (var image of spotData.spots[0].images) {
+					image=image.replaceAll(" ", "%20");
+					console.log(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`);
+					embeds.push(new EmbedBuilder().setImage(`https://gingerphoenix10.com/TourneyBot/images/${interaction.options.getString('stage')}/${image}.png`))
+				}
+				if (embeds.length == 0) embeds.push(new EmbedBuilder());
+				embeds[0].setTitle(spotData.stage)
+					.setColor(0x7289DA)
+					.setDescription(spotData.spots[0].text)
+
+				const response = await interaction.reply({
+					embeds: embeds,
+					components: [
+						new ActionRowBuilder()
+							.addComponents(back, next)
+					],
+					withResponse: true,
+				});
+				getPage(0, response);
+			} else {
+				const response = await interaction.reply({
+					embeds: [new EmbedBuilder().setTitle(interaction.options.getString('stage'))
+						.setColor(0x7289DA)
+						.setDescription("There are no banned spots for this stage.")]
+				});
+			}
 		},
 
 };
