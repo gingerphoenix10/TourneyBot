@@ -15,13 +15,12 @@ module.exports = {
 					{name: "Castle Upper Floor", value: "cuf"},
 					{name: "Jolly Roger Bay", value: "jrb"},
 					{name: "Big Boo's Haunt", value: "bbh"},
-					{name: "Hazy Maze Cave", value: "Hazy Maze Cave"},
 					{name: "Lethal Lava Land", value: "lll"},
 					{name: "Dire Dire Docks", value: "Dire Dire Docks"},
 					{name: "Snowman's Land", value: "Snowman's Land"},
 					{name: "Wet-Dry World", value: "Wet-Dry World"},
 					{name: "Tall Tall Mountain", value: "ttm"},
-					{name: "Tiny-Huge Island", value: "Tiny-Huge Island"},
+					{name: "Tiny-Huge Island", value: "thi"},
 					{name: "Tick Tock Clock", value: "Tick Tock Clock"},
 					{name: "Rainbow Ride", value: "rr"},
 					{name: "Princess's Secret Slide", value: "pss"},
@@ -111,7 +110,7 @@ module.exports = {
 							"images": [
 								"Screenshot (279)"
 							],
-							"text": "Hiding on top of one of the pillars near the bottom of the slide"
+							"text": "Hiding on top of the first pillar near the bottom of the slide (other pillars are fine)"
 						},
 						{
 							"images": [
@@ -163,6 +162,17 @@ module.exports = {
 								"Screenshot (294)"
 							],
 							"text": "Hiding out-of-bounds below the monkey platform by using the slope clip"
+						}
+					]
+				},
+				"thi": {
+					"stage": "Tiny-Huge Island",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (296)"
+							],
+							"text": "Holding onto the bottom of Wiggler's cage"
 						}
 					]
 				},
