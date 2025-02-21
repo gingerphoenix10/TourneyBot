@@ -152,7 +152,7 @@ module.exports = {
 					"spots": [
 						{
 							"images": [
-								"Screenshot (298)"
+								"Screenshot (301)"
 							],
 							"text": "Holding onto the grates over the hole next to the \"A-maze-ing emergency exit\" power star"
 						}
