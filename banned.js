@@ -16,23 +16,12 @@ module.exports = {
 					{name: "Jolly Roger Bay", value: "jrb"},
 					{name: "Big Boo's Haunt", value: "bbh"},
 					{name: "Lethal Lava Land", value: "lll"},
-					{name: "Dire Dire Docks", value: "Dire Dire Docks"},
-					{name: "Snowman's Land", value: "Snowman's Land"},
-					{name: "Wet-Dry World", value: "Wet-Dry World"},
+					{name: "Hazy Maze Cave", value: "hmc"},
 					{name: "Tall Tall Mountain", value: "ttm"},
 					{name: "Tiny-Huge Island", value: "thi"},
-					{name: "Tick Tock Clock", value: "Tick Tock Clock"},
 					{name: "Rainbow Ride", value: "rr"},
 					{name: "Princess's Secret Slide", value: "pss"},
-					{name: "The Secret Aquarium", value: "The Secret Aquarium"},
-					{name: "Bowser in the Dark World", value: "Bowser in the Dark World"},
-					{name: "Bowser in the Fire Sea", value: "Bowser in the Fire Sea"},
-					{name: "Bowser in the Sky", value: "Bowser in the Sky"},
-					{name: "Tower of the Wing Cap", value: "Tower of the Wing Cap"},
-					{name: "Cavern of the Metal Cap", value: "Cavern of the Metal Cap"},
-					{name: "Vanish Cap Under the Moat", value: "Vanish Cap Under the Moat"},
 					{name: "Wing Mario Over the Rainbow", value: "wmotr"},
-					{name: "Castle Courtyard", value: "Castle Courtyard"}
 				)),
 		async execute(interaction) {
 
@@ -53,6 +42,10 @@ module.exports = {
 						{
 							"images": [],
 							"text": "Hiding inside a cannon (by setting spot while over a cannon)"
+						},
+						{
+							"images": [],
+							"text": "Hiding in any wind in stages such as TTM or THI"
 						}
 					]
 				},
@@ -71,6 +64,12 @@ module.exports = {
 								"Screenshot (274)",
 							],
 							"text": "Hiding out-of-bounds behind the castle doors"
+						},
+						{
+							"images": [
+								"Screenshot (300)"
+							],
+							"text": "Holding onto the bottom of the Wooden bridge"
 						}
 					]
 				},
@@ -148,6 +147,17 @@ module.exports = {
 						}
 					],
 				},
+				"hmc": {
+					"stage": "Hazy Maze Cave",
+					"spots": [
+						{
+							"images": [
+								"Screenshot (298)"
+							],
+							"text": "Holding onto the grates over the hole next to the \"A-maze-ing emergency exit\" power star"
+						}
+					]
+				},
 				"ttm": {
 					"stage": "Tall Tall Mountain",
 					"spots": [
@@ -162,6 +172,12 @@ module.exports = {
 								"Screenshot (294)"
 							],
 							"text": "Hiding out-of-bounds below the monkey platform by using the slope clip"
+						},
+						{
+							"images": [
+								"Screenshot (299)"
+							],
+							"text": "Grabbing onto the edge of the slide at the dead-end spot"
 						}
 					]
 				},
